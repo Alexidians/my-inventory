@@ -1,10 +1,16 @@
 <script>
-var items = localStorage.getItem("myInventory").split(",")
+try {
+var items = localStorage.getItem("MyInventory").split(",")
 for (let i = 0; i < items.length; i++) {
  var itemDisplay = document.createElement("a")
  itemDisplay.innerHTML = items[i]
  itemDisplay.href = "javascript: alert('you used " + items[i] + "')"
  document.getElementById("items").appendChild(itemDisplay)
+}
+}
+catch(err) {
+ localStorage.setItem("error", err)
+ location.replace("error.html")
 }
 </script>
 <h1>Inventory</h1>
