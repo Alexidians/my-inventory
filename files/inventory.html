@@ -1,1 +1,13 @@
+<script>
+var items = localStorage.getItem("myInventory").split(",")
+for (let i = 0; i < items.length; i++) {
+ var itemDisplay = document.createElement("a")
+ itemDisplay.innerHTML = items[i]
+ itemDisplay.href = "javascript: alert('you used " + items[i] + "')"
+ document.getElementById("items").appendChild(itemDisplay)
+}
+</script>
+<h1>Inventory</h1>
+<div id="items">
 
+</div>
