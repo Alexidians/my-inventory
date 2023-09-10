@@ -2,5 +2,6 @@
 var errDisplay = document.createElement("code")
 errDisplay.innerHTML = localStorage.getItem("error")
 document.body.appendChild(errDisplay)
+localStorage.removeItem("error")
 document.getElementById("errProccesor").remove()
 </script>
